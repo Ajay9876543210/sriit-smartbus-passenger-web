@@ -1,0 +1,575 @@
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.passenger-dashboard {
+    min-height: 100vh;
+
+    background: #f8fafc;
+
+    color: #111827;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.passenger-dashboard-main {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 28px 24px 45px;
+
+    box-sizing: border-box;
+}
+
+.dashboard-home {
+    width: 100%;
+}
+
+
+/* =========================================
+   WELCOME CARD
+========================================= */
+
+.dashboard-welcome-card {
+    width: 100%;
+
+    margin-bottom: 30px;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================
+   WELCOME CONTENT
+========================================= */
+
+.dashboard-welcome-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+}
+
+.dashboard-welcome-icon {
+    flex-shrink: 0;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #eff6ff;
+
+    font-size: 31px;
+}
+
+.dashboard-welcome-text {
+    min-width: 0;
+}
+
+.dashboard-welcome-text h2 {
+    margin: 0 0 6px;
+
+    font-size: 23px;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    color: #111827;
+}
+
+.dashboard-welcome-text p {
+    margin: 0;
+
+    max-width: 760px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #64748b;
+}
+
+
+/* =========================================
+   POSITIVE MESSAGE
+========================================= */
+
+.dashboard-positive-message {
+    margin-top: 18px;
+
+    padding: 11px 15px;
+
+    border-radius: 11px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ACTIVE BUSES SECTION
+========================================= */
+
+.dashboard-buses-section {
+    width: 100%;
+}
+
+.dashboard-section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+.dashboard-section-title {
+    min-width: 0;
+}
+
+.dashboard-section-title h2 {
+    margin: 0 0 5px;
+
+    font-size: 22px;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    color: #111827;
+}
+
+.dashboard-section-title p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #64748b;
+}
+
+
+/* =========================================
+   ACTIVE BUS COUNT
+========================================= */
+
+.dashboard-bus-count {
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 32px;
+
+    padding: 6px 12px;
+
+    box-sizing: border-box;
+
+    border-radius: 999px;
+
+    background: #ecfdf5;
+
+    color: #15803d;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   MAP SECTION
+========================================= */
+
+.dashboard-map-section {
+    width: 100%;
+}
+
+.dashboard-map-topbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.dashboard-back-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 40px;
+
+    padding: 8px 14px;
+
+    border: 1px solid #dbe3ec;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.dashboard-back-button:hover {
+    background: #f8fafc;
+
+    border-color: #cbd5e1;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.06);
+
+    transform: translateY(-1px);
+}
+
+.dashboard-back-button:active {
+    transform: translateY(0);
+}
+
+.dashboard-back-arrow {
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   MAP WRAPPER
+========================================= */
+
+.dashboard-map-wrapper {
+    width: 100%;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .passenger-dashboard-main {
+        padding: 24px 20px 40px;
+    }
+
+    .dashboard-welcome-card {
+        padding: 20px;
+
+        margin-bottom: 26px;
+    }
+
+    .dashboard-welcome-text h2 {
+        font-size: 21px;
+    }
+
+    .dashboard-section-title h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+    .passenger-dashboard-main {
+        padding: 20px 16px 35px;
+    }
+
+    .dashboard-welcome-card {
+        padding: 17px;
+
+        margin-bottom: 23px;
+
+        border-radius: 15px;
+    }
+
+    .dashboard-welcome-content {
+        gap: 13px;
+    }
+
+    .dashboard-welcome-icon {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 13px;
+
+        font-size: 27px;
+    }
+
+    .dashboard-welcome-text h2 {
+        font-size: 19px;
+    }
+
+    .dashboard-welcome-text p {
+        font-size: 13px;
+
+        line-height: 1.55;
+    }
+
+    .dashboard-positive-message {
+        margin-top: 15px;
+
+        padding: 10px 12px;
+
+        font-size: 12px;
+    }
+
+    .dashboard-section-heading {
+        align-items: flex-start;
+
+        gap: 12px;
+
+        margin-bottom: 15px;
+    }
+
+    .dashboard-section-title h2 {
+        font-size: 19px;
+    }
+
+    .dashboard-section-title p {
+        font-size: 12px;
+    }
+
+    .dashboard-bus-count {
+        min-height: 29px;
+
+        padding: 5px 9px;
+
+        font-size: 10px;
+    }
+
+    .dashboard-back-button {
+        min-height: 38px;
+
+        padding: 7px 12px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .passenger-dashboard-main {
+        padding: 17px 12px 30px;
+    }
+
+    .dashboard-welcome-card {
+        padding: 15px;
+
+        margin-bottom: 21px;
+
+        border-radius: 14px;
+    }
+
+    .dashboard-welcome-content {
+        align-items: flex-start;
+
+        gap: 11px;
+    }
+
+    .dashboard-welcome-icon {
+        width: 44px;
+        height: 44px;
+
+        border-radius: 11px;
+
+        font-size: 24px;
+    }
+
+    .dashboard-welcome-text h2 {
+        margin-bottom: 5px;
+
+        font-size: 18px;
+    }
+
+    .dashboard-welcome-text p {
+        font-size: 12px;
+
+        line-height: 1.55;
+    }
+
+    .dashboard-positive-message {
+        margin-top: 13px;
+
+        padding: 9px 10px;
+
+        border-radius: 9px;
+
+        font-size: 11px;
+    }
+
+
+    /* Section heading */
+
+    .dashboard-section-heading {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 8px;
+    }
+
+    .dashboard-section-title h2 {
+        font-size: 18px;
+    }
+
+    .dashboard-section-title p {
+        font-size: 11px;
+    }
+
+    .dashboard-bus-count {
+        align-self: flex-start;
+
+        font-size: 10px;
+    }
+
+
+    /* Map back button */
+
+    .dashboard-map-topbar {
+        margin-bottom: 11px;
+    }
+
+    .dashboard-back-button {
+        width: 100%;
+
+        min-height: 40px;
+
+        border-radius: 9px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .passenger-dashboard-main {
+        padding: 14px 10px 25px;
+    }
+
+    .dashboard-welcome-card {
+        padding: 13px;
+
+        border-radius: 12px;
+    }
+
+    .dashboard-welcome-content {
+        gap: 9px;
+    }
+
+    .dashboard-welcome-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 21px;
+    }
+
+    .dashboard-welcome-text h2 {
+        font-size: 16px;
+    }
+
+    .dashboard-welcome-text p {
+        font-size: 11px;
+    }
+
+    .dashboard-positive-message {
+        font-size: 10px;
+    }
+
+    .dashboard-section-title h2 {
+        font-size: 17px;
+    }
+
+    .dashboard-back-button {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.dashboard-back-button:focus-visible {
+    outline: 3px solid rgba(59, 130, 246, 0.25);
+
+    outline-offset: 2px;
+}

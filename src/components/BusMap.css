@@ -1,0 +1,800 @@
+/* =========================================
+   BUS MAP SECTION
+========================================= */
+
+.bus-map-section {
+    width: 100%;
+}
+
+
+/* =========================================
+   MAP HEADER
+========================================= */
+
+.bus-map-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.bus-map-title-area {
+    min-width: 0;
+}
+
+.bus-map-title-area h2 {
+    margin: 0 0 5px;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    line-height: 1.25;
+
+    color: #111827;
+}
+
+.bus-map-trip,
+.bus-map-route {
+    margin: 3px 0;
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    color: #64748b;
+}
+
+.bus-map-route strong {
+    color: #475569;
+}
+
+
+/* =========================================
+   SOCKET STATUS
+========================================= */
+
+.bus-live-status {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.bus-live-status.online {
+    background: #ecfdf5;
+
+    color: #15803d;
+
+    animation:
+        liveStatusPulse
+        2s
+        ease-in-out
+        infinite;
+}
+
+@keyframes liveStatusPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.65;
+    }
+}
+
+
+/* =========================================
+   LIVE TRACKING BADGE
+========================================= */
+
+.live-badge {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 12px;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.35px;
+}
+
+.live-badge.tracking {
+    background: #ecfdf5;
+
+    color: #15803d;
+}
+
+.live-badge-dot {
+    font-size: 10px;
+}
+
+.live-badge.tracking .live-badge-dot {
+    animation:
+        liveDotPulse
+        1.5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes liveDotPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+}
+
+
+/* =========================================
+   POSITIVE MESSAGE
+========================================= */
+
+.map-positive-message {
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    margin-bottom: 14px;
+
+    padding: 12px 16px;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    color: #475569;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 16px rgba(15, 23, 42, 0.04);
+
+    animation:
+        mapMessageFlash
+        0.8s
+        ease;
+}
+
+@keyframes mapMessageFlash {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(5px);
+    }
+
+    45% {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   TRIP ENDED
+========================================= */
+
+.bus-trip-ended {
+    margin-bottom: 14px;
+
+    padding: 13px 16px;
+
+    border-radius: 12px;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    color: #b91c1c;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ROUTE ERROR
+========================================= */
+
+.bus-map-section > .error {
+    margin-bottom: 14px;
+}
+
+
+/* =========================================
+   ROUTE INFO
+========================================= */
+
+.bus-route-info {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+
+    padding: 11px 14px;
+
+    border-radius: 11px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    color: #475569;
+
+    font-size: 13px;
+}
+
+.bus-route-info strong {
+    color: #334155;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+.bus-route-info span {
+    flex-shrink: 0;
+
+    color: #64748b;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   LEAFLET MAP
+========================================= */
+
+.bus-map-container {
+    width: 100%;
+
+    height: 500px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================
+   BUS MARKER
+   IMPORTANT:
+   Do NOT animate transform here.
+   Leaflet uses transform for positioning.
+========================================= */
+
+.bus-marker {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(
+            0 3px 4px
+            rgba(0, 0, 0, 0.25)
+        );
+
+    animation:
+        busMarkerGlow
+        1.8s
+        ease-in-out
+        infinite;
+}
+
+@keyframes busMarkerGlow {
+
+    0%,
+    100% {
+        opacity: 1;
+
+        filter:
+            drop-shadow(
+                0 3px 4px
+                rgba(0, 0, 0, 0.25)
+            );
+    }
+
+    50% {
+        opacity: 0.78;
+
+        filter:
+            drop-shadow(
+                0 3px 8px
+                rgba(0, 0, 0, 0.35)
+            );
+    }
+}
+
+
+/* =========================================
+   STOP MARKER
+========================================= */
+
+.stop-marker {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(
+            0 2px 3px
+            rgba(0, 0, 0, 0.2)
+        );
+}
+
+
+/* =========================================
+   LOCATION INFORMATION
+========================================= */
+
+.bus-location-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+.bus-location-info div {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 11px 13px;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+}
+
+.bus-location-info strong {
+    font-size: 10px;
+
+    color: #64748b;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.45px;
+}
+
+.bus-location-info span {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    font-size: 13px;
+
+    color: #111827;
+
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   WAITING FOR LOCATION
+========================================= */
+
+.bus-waiting-location {
+    margin-top: 12px;
+
+    padding: 13px;
+
+    border-radius: 11px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    animation:
+        waitingPulse
+        2s
+        ease-in-out
+        infinite;
+}
+
+@keyframes waitingPulse {
+
+    0%,
+    100% {
+        opacity: 0.65;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   LEAFLET POPUP
+========================================= */
+
+.bus-map-section .leaflet-popup-content {
+    margin: 12px 14px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #475569;
+}
+
+.bus-map-section .leaflet-popup-content strong {
+    color: #111827;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .bus-map-title-area h2 {
+        font-size: 20px;
+    }
+
+    .bus-map-container {
+        height: 450px;
+
+        border-radius: 14px;
+    }
+
+    .map-positive-message {
+        font-size: 13px;
+
+        padding: 12px 14px;
+    }
+
+    .bus-location-info {
+        gap: 8px;
+    }
+
+    .bus-location-info div {
+        padding: 10px 11px;
+    }
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+    .bus-map-header {
+        gap: 12px;
+    }
+
+    .bus-map-title-area h2 {
+        font-size: 19px;
+    }
+
+    .bus-map-trip,
+    .bus-map-route {
+        font-size: 12px;
+    }
+
+    .bus-live-status {
+        padding: 6px 9px;
+
+        font-size: 11px;
+    }
+
+    .live-badge {
+        font-size: 10px;
+
+        padding: 6px 10px;
+    }
+
+    .map-positive-message {
+        min-height: 46px;
+
+        font-size: 13px;
+
+        padding: 11px 13px;
+    }
+
+    .bus-map-container {
+        height: 420px;
+
+        border-radius: 13px;
+    }
+
+    .bus-route-info {
+        padding: 10px 12px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .bus-map-header {
+        flex-direction: column;
+
+        gap: 9px;
+
+        margin-bottom: 10px;
+    }
+
+    .bus-live-status {
+        align-self: flex-start;
+    }
+
+    .live-badge {
+        margin-bottom: 10px;
+    }
+
+    .map-positive-message {
+        margin-bottom: 11px;
+
+        border-radius: 11px;
+
+        font-size: 12px;
+
+        line-height: 1.45;
+    }
+
+    .bus-trip-ended {
+        font-size: 12px;
+
+        padding: 11px 13px;
+    }
+
+    .bus-route-info {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4px;
+
+        margin-bottom: 10px;
+    }
+
+    .bus-route-info strong {
+        max-width: 100%;
+    }
+
+    .bus-route-info span {
+        font-size: 11px;
+    }
+
+    .bus-map-container {
+        height: 380px;
+
+        border-radius: 11px;
+    }
+
+    .bus-location-info {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        margin-top: 10px;
+    }
+
+    .bus-location-info div {
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 10px;
+
+        padding: 10px 12px;
+    }
+
+    .bus-location-info strong {
+        flex-shrink: 0;
+    }
+
+    .bus-location-info span {
+        text-align: right;
+
+        font-size: 12px;
+    }
+
+    .bus-waiting-location {
+        margin-top: 10px;
+
+        padding: 11px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .bus-map-title-area h2 {
+        font-size: 18px;
+    }
+
+    .bus-map-trip,
+    .bus-map-route {
+        font-size: 11px;
+    }
+
+    .bus-live-status {
+        font-size: 10px;
+
+        padding: 5px 8px;
+    }
+
+    .live-badge {
+        font-size: 9px;
+
+        padding: 6px 9px;
+    }
+
+    .map-positive-message {
+        min-height: 50px;
+
+        padding: 10px;
+
+        font-size: 11px;
+    }
+
+    .bus-map-container {
+        height: 350px;
+    }
+
+    .bus-marker {
+        width: 38px;
+        height: 38px;
+
+        font-size: 30px;
+    }
+
+    .stop-marker {
+        font-size: 22px;
+    }
+
+    .bus-location-info div {
+        padding: 9px 10px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 320px) {
+
+    .bus-map-container {
+        height: 320px;
+    }
+
+    .map-positive-message {
+        font-size: 10px;
+    }
+
+    .bus-location-info span {
+        max-width: 60%;
+    }
+}

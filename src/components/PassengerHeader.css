@@ -1,0 +1,160 @@
+/* =========================================
+   PASSENGER HEADER
+========================================= */
+
+.passenger-header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+    position: relative;
+    z-index: 100;
+}
+
+.passenger-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.passenger-brand-block {
+    min-width: 0;
+}
+
+.passenger-brand {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #111827;
+}
+
+.passenger-tagline {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* =========================================
+   USER AREA
+========================================= */
+
+.passenger-user-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.passenger-welcome {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.passenger-welcome strong {
+    color: #111827;
+    font-weight: 700;
+}
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.passenger-logout-button {
+    border: none;
+    border-radius: 10px;
+
+    padding: 9px 16px;
+
+    background: #111827;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.passenger-logout-button:hover {
+    background: #1f2937;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(15, 23, 42, 0.15);
+}
+
+.passenger-logout-button:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .passenger-header-content {
+        padding: 14px 16px;
+        align-items: flex-start;
+    }
+
+    .passenger-brand {
+        font-size: 21px;
+    }
+
+    .passenger-tagline {
+        font-size: 12px;
+    }
+
+    .passenger-user-area {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    .passenger-welcome {
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .passenger-logout-button {
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .passenger-header-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .passenger-user-area {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .passenger-welcome {
+        text-align: left;
+    }
+}

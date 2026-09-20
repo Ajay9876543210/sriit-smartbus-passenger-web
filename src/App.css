@@ -1,0 +1,163 @@
+/* =========================================
+   GLOBAL & ROOT STYLES
+========================================= */
+
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --primary-light: rgba(79, 70, 229, 0.1);
+
+    --bg-color: #f8fafc;
+    --surface-color: #ffffff;
+
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+
+    --border-color: #e2e8f0;
+
+    --danger-bg: #fef2f2;
+    --danger-text: #dc2626;
+
+    --success-color: #16a34a;
+    --success-bg: #f0fdf4;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    --shadow-sm:
+        0 1px 3px rgba(0, 0, 0, 0.05);
+
+    --shadow-md:
+        0 4px 12px rgba(0, 0, 0, 0.05);
+
+    --shadow-lg:
+        0 10px 25px -5px rgba(0, 0, 0, 0.08),
+        0 8px 10px -6px rgba(0, 0, 0, 0.08);
+
+    --transition:
+        all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-width: 320px;
+
+    font-family:
+        "Inter",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+
+    background: var(--bg-color);
+
+    color: var(--text-main);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+
+/* =========================================
+   GLOBAL FORM ELEMENTS
+========================================= */
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+select {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   GLOBAL IMAGE SAFETY
+========================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+    background: rgba(79, 70, 229, 0.15);
+}
+
+
+/* =========================================
+   MOBILE SAFETY
+========================================= */
+
+@media (max-width: 600px) {
+
+    html,
+    body,
+    #root {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
